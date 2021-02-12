@@ -1,0 +1,95 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  
+- story: appointment+location
+  steps:
+  - intent: greet
+  - action: utter_how_can_i_help
+  - intent: service_provide                        
+    entities:
+    - facility: "appointment"
+    - day: "monday"
+  - action: utter_ask_location
+  - intent: inform_location
+    entities:
+    - location: "Andheri"
+  - action: utter_ask_id
+  - intent: personal_info
+    entities: 
+    - name: "Nitesh"
+  - action: action_book
+  - intent: affirm
+  - action: utter_goodbye
+  
+- story: resources_ask
+  steps:
+  - intent: greet
+  - action: utter_how_can_i_help
+  - intent: service_provide                        
+    entities:
+    - facility: "resources"
+  - action: action_resources_link
+  - intent: affirm
+  - action: utter_goodbye
+  
+  
+- story: live_counsellor
+  steps:
+  - intent: greet
+  - action: utter_how_can_i_help
+  - intent: service_provide                        
+    entities:
+    - facility: "counsellor"
+  - action: utter_ask_id
+  - intent: personal_info
+    entities:
+    - name: "Ankita"
+  - action: action_live
+  
+- story: telephonic
+  steps:
+  - intent: greet
+  - action: utter_how_can_i_help
+  - intent: service_provide                        
+    entities:
+    - facility: "telephonic session"
+    - day: "thursday"
+  - action: utter_ask_id
+  - intent: personal_info
+    entities:
+    - name: "Ankit"
+  - action: utter_ask_contact
+  - intent: personal_info
+    entities:
+    - contact: "9987226850"
+  - action: action_book_tele
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

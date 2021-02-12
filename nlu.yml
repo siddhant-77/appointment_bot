@@ -1,0 +1,152 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - how's it going
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hola
+    - yo man
+    - yo 
+    - whatsup
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+    
+- intent: inform_location
+  examples: |
+    - [Andheri](location)
+    - [Vile Parle](location)
+    - [Kandivali](location)
+    - [Malad](location)
+    - [Goregaon](location)
+    - [Borivali](location)
+    - [Churchgate](location)
+    - [Worli](location)
+    - [Mira Road](location)
+    - [Jogeshwari](location)
+    
+- intent: personal_info
+  examples: |
+    - My phonenumber is [9430199670](contact)                               
+    - This is my number [9943019967](contact)
+    - [9943019967](contact) is my phone number
+    - Sure my phonenumber is [09943001996](contact)
+    - my telephone number is [9943019967](contact)
+    - and my number is [9987226850](contact)
+    - My employee id [13256](empid)
+    - this is my cpf no [6709](empid)
+    - this is my employee number [06745](empid)
+    - And my cpf number is [98709](empid)
+    - My personal contact number [9878129870](contact)
+    - My name is [Danny Mullen](name)
+    - [Siddhant](name) is my name
+    - I am [Leo Springer](name)
+    - My First name is [Taylor](name)
+    - Yeah my name is [Raj](name)
+    
+- intent: service_provide
+  examples: |
+    - I need to speak to a [live counsellor](facility)
+    - Find me a [counsellor](facility) I can consult
+    - I want to book a [telephonic session](facility) for [monday](day)
+    - Please schedule me a [telephonic session](facility) for next [Wednesday](day)
+    - I want to book an [appointment](facility) for [tomorrow](day)
+    - Please suggest me some well being [resources](facility)
+    - Can I speak to a [counsellor](facility) right now
+    - Please provide with {resources](facility)
+    - Book me a [telephonic session](facility) for [Friday](day)
+    - Book me an an [appointment](facility) for [Thursday](day)
+    - Schedule an [appointment](facility) for [Tuesday](day)
+    - Suggest mental well being [resources](facility)
+    
+    
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - thanks
+    - thank you
+    - tysm
+    - thank you so much
+    - thanks for helping
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
