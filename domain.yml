@@ -1,0 +1,85 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - inform_location
+  - personal_info
+  - service_provide
+  - bot_challenge
+  
+entities:
+  - location
+  - contact
+  - empid
+  - name
+  - facility
+  - day
+  
+actions:
+  - utter_greet
+  - utter_happy
+  - utter_how_can_i_help
+  - utter_ask_location
+  - utter_ask_id
+  - action_book
+  - utter_goodbye
+  - action_resources_link
+  - action_live
+  - utter_ask_contact
+  - action_book_tele
+  
+slots:
+  facility:
+    type: text
+    influence_conversation: false
+  location:
+    type: text
+    influence_conversation: false
+  name:
+    type: any
+  contact: 
+    type: any
+  empid: 
+    type: any
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Have a great day, bye!"
+  
+  utter_how_can_i_help:
+  - text: "Welcome to EAP India, how can I help you?"
+  
+  utter_ask_location:
+  - text: "Can you provide your location, please?"
+  
+  utter_ask_id:
+  - text: "Can you please provide us with your personal identification?"
+  
+  utter_ask_contact:
+  - text: "Can you please provide us with your contact number?"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
